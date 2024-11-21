@@ -15,12 +15,12 @@
                 <div class="left-signIn">
                     <h1 class="label-signIn"> Sign-in </h1>
                  
-                    <form> 
+                    <form action="" method="post"> 
                         <div class="form-signIn">
-                            <label for="schoolEmail"> <b>School Email</b> </label> <br>
-                            <input type="text" id="schoolEmail" class="form-control" placeholder="Enter your school email" required> <br>
-                            <label for="password"> <b>Password</b> </label> <br>
-                            <input type="password" id="password" class="form-control" placeholder="Enter your password" required> <br>
+                            <label for="signin-schoolEmail"> <b>School Email</b> </label> <br>
+                            <input type="text" id="signin-schoolEmail" name="signin-schoolEmail" class="form-control" placeholder="Enter your school email" required> <br>
+                            <label for="signin-password"> <b>Password</b> </label> <br>
+                            <input type="password" id="signin-password" name="signin-password" class="form-control" placeholder="Enter your password" required> <br>
                         </div>
                         <div class="form-row">
                             <div class="form-check-label"> 
@@ -29,7 +29,7 @@
                             <a href="#"> Forgot password? </a> <br>
                         </div>
 
-                        <button class="btn btn-signIn" id="btn-signIn" type="submit"> Sign-in </button>
+                        <button class="btn btn-signIn" id="btn-signIn" type="submit"> <a href="./myorganizations.html"> Sign-in</a> </button>
                     </form>
                 </div>
                 <div class="right-signIn"> 
@@ -86,7 +86,8 @@
                             <input type="password" id="signUp-repeatpassword" class="form-control" placeholder="Repeat your password" required> <br>
                         </div>
 
-                        <button class="btn btn-signUp" id="btn-signUp" type="submit"> Sign-in </button>
+                        <!--- REMOVE HREF AFTER CONNECTING DATABASE/SERVER -->
+                        <button class="btn btn-signUp" id="btn-signUp" type="submit"> Sign-up </button>
                     </form>
 
                     
