@@ -20,47 +20,49 @@ main {
 }
 
 .hero {
+  justify-content: center;
+  align-items: center;
   width: 900px;
   height: 600px;
   flex-shrink: 0;
+  position: absolute;
 }
 .hero .signIn {
-  display: flex;
-  height: 100%;
   background-color: white;
   border-radius: 50px;
+  position: absolute;
 }
-.hero .left-signIn {
+.hero .signIn .left-signIn {
   width: 60%;
-  margin: 100px;
+  margin: 90px 100px 100px 100px;
   align-items: center;
   text-align: center;
 }
-.hero .left-signIn .label-signIn {
+.hero .signIn .left-signIn .label-signIn {
   text-align: center;
   font-weight: bold;
   margin-bottom: 30px;
 }
-.hero .left-signIn .form-input {
+.hero .signIn .left-signIn .form-signIn {
   text-align: left;
 }
-.hero .left-signIn .form-row {
+.hero .signIn .left-signIn .form-row {
   justify-content: center;
   align-items: center;
   display: flex;
   width: 100%;
 }
-.hero .left-signIn .form-row .form-check-label {
+.hero .signIn .left-signIn .form-row .form-check-label {
   display: flex;
   align-items: center;
 }
-.hero .left-signIn .form-row .form-check-label span {
+.hero .signIn .left-signIn .form-row .form-check-label span {
   margin-left: 10px;
 }
-.hero .left-signIn .form-row a {
+.hero .signIn .left-signIn .form-row a {
   margin-left: auto;
 }
-.hero .left-signIn .btn-signIn {
+.hero .signIn .left-signIn .btn-signIn {
   margin-top: 100px;
   background-color: #213B9A;
   color: white;
@@ -68,10 +70,10 @@ main {
   border-radius: 116px;
   font-weight: 600;
 }
-.hero .left-signIn .btn-signIn:hover {
+.hero .signIn .left-signIn .btn-signIn:hover {
   background-color: #2d4ec6;
 }
-.hero .right-signIn {
+.hero .signIn .right-signIn {
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -80,34 +82,117 @@ main {
   color: black;
   border-radius: 0px 50px 50px 0px;
 }
-.hero .right-signIn .sao-logo {
+.hero .signIn .right-signIn .sao-logo {
   width: 25%;
 }
-.hero .right-signIn .contents-right-signIn {
+.hero .signIn .right-signIn .contents-right-signIn {
   margin-top: 70px;
 }
-.hero .right-signIn .welcomeTitle {
+.hero .signIn .right-signIn .welcomeTitle {
   font-weight: bold;
   line-height: 30px;
 }
-.hero .right-signIn .title-tagline {
+.hero .signIn .right-signIn .title-tagline {
   margin-top: 40px;
 }
-.hero .right-signIn .rdr-signUp {
+.hero .signIn .right-signIn .rdr-signUp {
   color: white;
   line-height: 10px;
   font-size: 13px;
   font-style: italic;
   margin-top: 125px;
 }
-.hero .right-signIn .rdr-signUp .btn-signUp {
+.hero .signIn .right-signIn .rdr-signUp .btn-signUp {
   background-color: transparent;
   border: 1px solid white;
   border-radius: 20px;
   width: 150px;
   color: white;
 }
-.hero .right-signIn .rdr-signUp .btn-signUp:hover {
+.hero .signIn .right-signIn .rdr-signUp .btn-signUp:hover {
   background-color: white;
   color: #FBAF41;
+}
+.hero .signUp {
+  display: none;
+  position: absolute;
+  height: 100%;
+  background-color: white;
+  border-radius: 50px;
+}
+.hero .signUp .left-signUp {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  background-color: #FBAF41;
+  color: black;
+  border-radius: 50px 0px 0px 50px;
+}
+.hero .signUp .left-signUp .sao-logo {
+  width: 25%;
+}
+.hero .signUp .left-signUp .contents-left-signUp {
+  margin-top: 140px;
+}
+.hero .signUp .left-signUp .welcomeTitle {
+  font-weight: bold;
+  line-height: 30px;
+}
+.hero .signUp .left-signUp .title-tagline {
+  margin-top: 40px;
+}
+.hero .signUp .left-signUp .rdr-goBack {
+  color: white;
+  line-height: 10px;
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 125px;
+}
+.hero .signUp .left-signUp .rdr-goBack .btn-goBack {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 150px;
+  color: white;
+}
+.hero .signUp .left-signUp .rdr-goBack .btn-goBack:hover {
+  background-color: white;
+  color: #FBAF41;
+}
+.hero .right-signUp {
+  width: 60%;
+  margin: 50px 100px 100px 100px;
+  align-items: center;
+  text-align: center;
+}
+.hero .right-signUp .label-signUp {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.hero .right-signUp .form-signUp {
+  text-align: left;
+  line-height: 20px;
+}
+.hero .right-signUp .btn-signUp {
+  margin-top: 10px;
+  background-color: #213B9A;
+  color: white;
+  width: 160px;
+  border-radius: 116px;
+  font-weight: 600;
+}
+.hero .right-signUp .btn-signUp:hover {
+  background-color: #2d4ec6;
+}
+.hero .signIn, .hero .signUp {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  transition: opacity 0.5s ease, visibility 1s ease;
+}
+.hero .signIn.active, .hero .signUp.active {
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=index.css.map */
