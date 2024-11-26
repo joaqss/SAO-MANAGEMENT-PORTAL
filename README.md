@@ -7,7 +7,7 @@ The SAO Management Portal efficiently and effectively digitalizes the system of 
 - Nathanael Garcia
 - Carl Villanueva
 
-## Libaries & Frameworks Used
+## Libraries & Frameworks Used
 - Bootstrap 
 - Sass
 - Font Awesome
