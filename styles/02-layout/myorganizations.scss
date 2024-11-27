@@ -5,6 +5,12 @@
     align-items: center;
 }
 
+@mixin removeSelect {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -24,6 +30,10 @@
         cursor: pointer;
         color: #213B9A;
         
+    }
+
+    .user-burger {
+        @include removeSelect();
     }
 
     .user-burger-icons {
@@ -59,7 +69,7 @@
 
     .bars-dropdown {
         list-style-type: none;
-        display: block;
+        display: none;
         flex-direction: column;
         position: absolute;
         left: auto;
@@ -106,6 +116,7 @@ main {
     }
 
     .card {
+        @include removeSelect();
         width: 800px;
         height: 150px;
         display: flex;
@@ -125,6 +136,18 @@ main {
         cursor: pointer;
         z-index: 10; // Ensure the icon appears above other elements
         
+    }
+
+    .ellipsis-extended {
+        display: none;
+        padding: 10px;
+        background-color: #EDEDED;
+        border-radius: 5px;
+        box-shadow: 2px 5px 5px rgb(156, 156, 156);
+        position: absolute;
+        top: 30px;
+        right: -90px;
+        z-index: 10;
     }
 
     .row {
@@ -154,7 +177,7 @@ main {
         width: 100%;
         height: 100%;
         
-        
     }
+
 }
 
