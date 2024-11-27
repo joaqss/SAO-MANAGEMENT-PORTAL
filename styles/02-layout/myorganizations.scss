@@ -26,7 +26,7 @@
         
     }
 
-    .user-burger {
+    .user-burger-icons {
         margin-right: 24px;
         background-color: #213B9A;
         padding: 6px 12px;
@@ -52,11 +52,42 @@
             color: white;
             @include centerItems();
             margin-right: 4px;
-            cursor: pointer;
-            
-            
+            cursor: pointer;        
         }
+
     }
+
+    .bars-dropdown {
+        list-style-type: none;
+        display: block;
+        flex-direction: column;
+        position: absolute;
+        left: auto;
+        right: 25px;
+        top: 90px;
+        background-color: #213B9A;
+        padding: 15px 0px 20px 0px;
+        border-radius: 16px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        line-height: 32px;
+
+        .dropdown-options {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .dropdown-options:hover {
+            background-color:#1a2f79;
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    } 
 }
 
 
