@@ -25,7 +25,7 @@ body {
   cursor: pointer;
   color: #213B9A;
 }
-.navbar .user-burger {
+.navbar .user-burger-icons {
   margin-right: 24px;
   background-color: #213B9A;
   padding: 6px 12px;
@@ -33,7 +33,7 @@ body {
   display: flex;
   border-radius: 28px;
 }
-.navbar .user-burger .fa-user {
+.navbar .user-burger-icons .fa-user {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -45,12 +45,40 @@ body {
   margin-right: 16px;
   cursor: pointer;
 }
-.navbar .user-burger .fa-bars {
+.navbar .user-burger-icons .fa-bars {
   color: white;
   justify-content: center;
   align-items: center;
   margin-right: 4px;
   cursor: pointer;
+}
+.navbar .bars-dropdown {
+  list-style-type: none;
+  display: block;
+  flex-direction: column;
+  position: absolute;
+  left: auto;
+  right: 25px;
+  top: 90px;
+  background-color: #213B9A;
+  padding: 15px 0px 20px 0px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  line-height: 32px;
+}
+.navbar .bars-dropdown .dropdown-options {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navbar .bars-dropdown .dropdown-options:hover {
+  background-color: #1a2f79;
+  border-radius: 10px;
+}
+.navbar .bars-dropdown a {
+  text-decoration: none;
+  color: white;
 }
 
 main {
