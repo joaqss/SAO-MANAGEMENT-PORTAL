@@ -31,12 +31,15 @@ main {
   background-color: white;
   border-radius: 50px;
   position: absolute;
+  display: flex;
 }
 .hero .signIn .left-signIn {
+  opacity: 1;
   width: 60%;
   margin: 90px 100px 100px 100px;
   align-items: center;
   text-align: center;
+  transition: 0.7s ease-in-out;
 }
 .hero .signIn .left-signIn .label-signIn {
   text-align: center;
@@ -81,6 +84,7 @@ main {
   background-color: #FBAF41;
   color: black;
   border-radius: 0px 50px 50px 0px;
+  transition: 0.7s ease-in-out;
 }
 .hero .signIn .right-signIn .sao-logo {
   width: 25%;
@@ -114,7 +118,8 @@ main {
   color: #FBAF41;
 }
 .hero .signUp {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   height: 100%;
   background-color: white;
@@ -165,6 +170,7 @@ main {
   margin: 50px 100px 100px 100px;
   align-items: center;
   text-align: center;
+  transition: 0.7s ease-in-out;
 }
 .hero .right-signUp .label-signUp {
   text-align: center;
@@ -190,9 +196,16 @@ main {
   opacity: 0;
   visibility: hidden;
   display: flex;
-  transition: opacity 0.5s ease, visibility 1s ease;
+  transition: visibility 1s ease;
 }
 .hero .signIn.active, .hero .signUp.active {
   opacity: 1;
   visibility: visible;
+}
+.hero .right-signIn.active {
+  border-radius: 50px 0px 0px 50px;
+  transform: translate(-620px, 0px);
+}
+.hero .left-signIn.active {
+  transform: translateX(250px);
 }/*# sourceMappingURL=index.css.map */
