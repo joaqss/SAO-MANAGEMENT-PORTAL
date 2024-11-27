@@ -27,12 +27,15 @@ main {
         background-color: white;
         border-radius: 50px;
         position: absolute;
+        display: flex; 
 
         .left-signIn {
+            opacity: 1;
             width: 60%;
             margin: 90px 100px 100px 100px;
             align-items: center;
             text-align: center;
+            transition: 0.7s ease-in-out;
             
             
             .label-signIn {
@@ -90,6 +93,7 @@ main {
             background-color: #FBAF41;
             color: black;
             border-radius: 0px 50px 50px 0px;
+            transition: 0.7s ease-in-out;
             
     
             .sao-logo {
@@ -135,7 +139,8 @@ main {
     } // end of sign-in css
 
     .signUp {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
         position: absolute;
         height: 100%;
         background-color: white;
@@ -197,6 +202,7 @@ main {
             margin: 50px 100px 100px 100px;
             align-items: center;
             text-align: center;
+            transition: 0.7s ease-in-out;
             
             .label-signUp {
                 text-align: center;
@@ -226,15 +232,18 @@ main {
     } // end of sign-up css
 
     .signIn, .signUp {
-        opacity: 0;
+        opacity: 0  ;
         visibility: hidden;
         display: flex; 
-        transition: opacity 0.5s ease, visibility 1s ease;
+        transition: visibility 1s ease;
     }
     
     .signIn.active, .signUp.active {
         opacity: 1;
         visibility: visible;
-    }    
+    }
+
+
+    
     
 }
