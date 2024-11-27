@@ -25,6 +25,11 @@ body {
   cursor: pointer;
   color: #213B9A;
 }
+.navbar .user-burger {
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
+}
 .navbar .user-burger-icons {
   margin-right: 24px;
   background-color: #213B9A;
@@ -54,7 +59,7 @@ body {
 }
 .navbar .bars-dropdown {
   list-style-type: none;
-  display: block;
+  display: none;
   flex-direction: column;
   position: absolute;
   left: auto;
@@ -93,6 +98,9 @@ main h1 {
   margin-bottom: 20px;
 }
 main .card {
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
   width: 800px;
   height: 150px;
   display: flex;
@@ -109,6 +117,17 @@ main .fa-ellipsis {
   top: 20px;
   right: 25px;
   cursor: pointer;
+  z-index: 10;
+}
+main .ellipsis-extended {
+  display: none;
+  padding: 10px;
+  background-color: #EDEDED;
+  border-radius: 5px;
+  box-shadow: 2px 5px 5px rgb(156, 156, 156);
+  position: absolute;
+  top: 30px;
+  right: -90px;
   z-index: 10;
 }
 main .row {
