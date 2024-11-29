@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #FBAF41;
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+}
+footer .footer-logo {
+  width: 10%;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+footer .contact-sao {
+  margin: 50px;
+}
+
+navbar {
+  display: flex;
+  position: fixed;
+  height: 90px;
+  width: 100%;
+  top: 0;
+  justify-content: space-between;
+  padding: 0;
+  align-items: center;
+  z-index: 500;
+}
+navbar .fa-bell {
+  width: 50px;
+  margin-left: auto;
+  cursor: pointer;
+  color: #213B9A;
+}
+navbar .user-burger {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+navbar .user-burger-icons {
+  margin-right: 24px;
+  background-color: #213B9A;
+  padding: 6px 12px;
+  align-items: center;
+  display: flex;
+  border-radius: 28px;
+}
+navbar .user-burger-icons .fa-user {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #213B9A;
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+navbar .user-burger-icons .fa-bars {
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+  cursor: pointer;
+}
+navbar .notif-dropdown {
+  display: none;
+  list-style-type: none;
+  flex-direction: column;
+  position: absolute;
+  right: 150px;
+  top: 75px;
+  box-shadow: 2px 5px 5px rgb(156, 156, 156);
+  border-radius: 16px;
+  width: 370px;
+  z-index: 1000;
+  background-color: white;
+  opacity: 0;
+  max-height: 0;
+  transition: ease-in-out 0.2s, opacity 0.4s ease-in-out, max-height 0.4s;
+}
+navbar .notif-dropdown .notif-header {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  background-color: #213B9A;
+  color: white;
+  padding: 10px;
+  border-radius: 16px 16px 0 0;
+  box-sizing: border-box;
+  position: relative;
+  position: sticky;
+}
+navbar .notif-dropdown .notif-content {
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 470px;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow-y: auto;
+}
+navbar .notif-dropdown .notif-content .notif-content-card {
+  border: none;
+  background-color: #EFEFEF;
+  width: 100%;
+  margin-bottom: 10px;
+}
+navbar .notif-dropdown .notif-content .notif-content-card .notif-card-title {
+  font-size: 18px;
+}
+navbar .notif-dropdown .notif-content .notif-content-card .notif-card-text {
+  font-size: 14px;
+}
+navbar .notif-dropdown.active {
+  top: 90px;
+  opacity: 1;
+  max-height: 500px;
+}
+navbar .bars-dropdown {
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  left: auto;
+  right: 25px;
+  top: 75px;
+  background-color: #213B9A;
+  padding: 15px 0px 20px 0px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  line-height: 32px;
+  opacity: 0%;
+  max-height: 0;
+  overflow: hidden;
+  transition: ease-in-out 0.2s, opacity 0.4s ease-in-out, max-height 0.4s;
+}
+navbar .bars-dropdown .dropdown-options {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+navbar .bars-dropdown .dropdown-options:hover {
+  background-color: #1a2f79;
+  border-radius: 10px;
+}
+navbar .bars-dropdown a {
+  text-decoration: none;
+  color: white;
+}
+navbar .bars-dropdown.active {
+  top: 90px;
+  display: flex;
+  opacity: 1;
+  transition: 0.2s;
+  max-height: 500px;
+}
+
+.sao-portal_logo {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  width: 130px;
+  min-width: 150px;
+  margin-left: 32px;
+  cursor: pointer;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: 100px;
+}
+main h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+main .card {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  width: 800px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EDEDED;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 2px 5px 5px rgb(156, 156, 156);
+  cursor: pointer;
+}
+main .fa-ellipsis {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+main .ellipsis-extended {
+  display: none;
+  padding: 10px;
+  background-color: #EDEDED;
+  border-radius: 5px;
+  box-shadow: 2px 5px 5px rgb(156, 156, 156);
+  position: absolute;
+  top: 20px;
+  right: -90px;
+  z-index: 10;
+  opacity: 0;
+  overflow: hidden;
+  transition: ease 0.2s, opacity 0.3s ease-in-out;
+}
+main .ellipsis-extended.active {
+  top: 30px;
+  opacity: 1;
+  transition: 0.2s;
+}
+main .row {
+  display: flex;
+  align-items: center;
+}
+main .col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .col-md-4 .img-org {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+main .card-body {
+  margin-top: 0px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}

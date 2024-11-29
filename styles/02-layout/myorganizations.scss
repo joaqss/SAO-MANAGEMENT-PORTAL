@@ -1,105 +1,14 @@
 @import "../01-base/_foundation";
+@import "../01-base/_footer";
+@import "../01-base/user-burger";
 
-@mixin centerItems {
-    justify-content: center;
-    align-items: center;
+.sao-portal_logo {
+    @include removeSelect();
+    width: 130px;
+    min-width: 150px;
+    margin-left: 32px;
+    cursor: pointer;     
 }
-
-@mixin removeSelect {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    align-items: center;
-
-
-    .sao-portal_logo {
-        width: 10%;
-        margin-left: 32px;
-        cursor: pointer;
-    }
-
-    .fa-bell {
-        width: 50px;
-        margin-left: auto;
-        cursor: pointer;
-        color: #213B9A;
-        
-    }
-
-    .user-burger {
-        @include removeSelect();
-    }
-
-    .user-burger-icons {
-        margin-right: 24px;
-        background-color: #213B9A;
-        padding: 6px 12px;
-        align-items: center;
-        display: flex;
-        border-radius: 28px;
-        
-
-        .fa-user {
-            @include centerItems();
-            display: flex;
-            color: #213B9A;
-            background-color: white;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;   
-            margin-right: 16px;
-            cursor: pointer;
-
-        }
-
-        .fa-bars {
-            color: white;
-            @include centerItems();
-            margin-right: 4px;
-            cursor: pointer;        
-        }
-
-    }
-
-    .bars-dropdown {
-        list-style-type: none;
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        left: auto;
-        right: 25px;
-        top: 90px;
-        background-color: #213B9A;
-        padding: 15px 0px 20px 0px;
-        border-radius: 16px;
-        font-size: 16px;
-        font-weight: bold;
-        color: white;
-        line-height: 32px;
-
-        .dropdown-options {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .dropdown-options:hover {
-            background-color:#1a2f79;
-            border-radius: 10px;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-        }
-    } 
-}
-
 
 main {
     align-items: center;
@@ -131,10 +40,10 @@ main {
 
     .fa-ellipsis {
         position: absolute;
-        top: 20px; // Adjust as needed
-        right: 25px; // Adjust as needed
+        top: 20px; 
+        right: 25px; 
         cursor: pointer;
-        z-index: 10; // Ensure the icon appears above other elements
+        z-index: 10;
         
     }
 
@@ -145,9 +54,18 @@ main {
         border-radius: 5px;
         box-shadow: 2px 5px 5px rgb(156, 156, 156);
         position: absolute;
-        top: 30px;
+        top: 20px;
         right: -90px;
         z-index: 10;
+        opacity: 0;
+        overflow: hidden;
+        transition: ease .2s, opacity .3s ease-in-out;
+    }
+
+    .ellipsis-extended.active {
+        top: 30px;
+        opacity: 1;
+        transition: .2s;
     }
 
     .row {
@@ -180,4 +98,6 @@ main {
     }
 
 }
+
+
 

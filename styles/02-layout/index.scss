@@ -1,18 +1,13 @@
 @import "../01-base/_foundation";
 
-@mixin centerItems {
-    justify-content: center;
-    align-items: center;
-}
-
-
 main {
     @include centerItems();
     display: flex;
     height: 100vh;
-    background-image: url('../../images/landing-bg.png');
+    background-image: url("../../../images/landing-bg.png");
     background-repeat: none;
     background-size: cover;
+    background-position: center;
     position: relative;
 }
 

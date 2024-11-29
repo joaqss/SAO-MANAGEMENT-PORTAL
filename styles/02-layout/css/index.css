@@ -13,9 +13,10 @@ main {
   align-items: center;
   display: flex;
   height: 100vh;
-  background-image: url("../../images/landing-bg.png");
+  background-image: url("../../../images/landing-bg.png");
   background-repeat: none;
   background-size: cover;
+  background-position: center;
   position: relative;
 }
 
@@ -212,4 +213,4 @@ main {
 }
 .hero .left-signIn.active {
   transform: translateX(250px);
-}/*# sourceMappingURL=index.css.map */
+}
