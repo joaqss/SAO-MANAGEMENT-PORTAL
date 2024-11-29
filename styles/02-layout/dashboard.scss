@@ -1,0 +1,37 @@
+@import "../01-base/_foundation";
+@import "../01-base/_footer";
+@import "../01-base/_user-burger";
+@import "../01-base/_sidebar";
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    width: 100%; 
+}
+
+.wrapper-main {
+    width: 100%;
+    height: 100vh;
+
+    .navbar-title {
+        margin-top: 30px;
+        margin-left: 40px;
+
+        .dashboard-title {
+            font-size: 28px;
+            line-height: 16px;
+        }
+
+    }
+}
+
+main {    
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; // Allow the main content to grow and take up available space
+    overflow-y: auto; // Enable vertical scrolling if content overflows
+    z-index: 0;
+    margin-top: 40px;
+    margin-left: 40px;
+}
