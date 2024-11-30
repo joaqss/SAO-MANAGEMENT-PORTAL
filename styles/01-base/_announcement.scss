@@ -1,0 +1,82 @@
+.fa-envelope {
+    @include centerItems();
+    display: flex;
+    position: absolute;
+    background-color: #213B9A;
+    color: white;
+    padding: 30px 20px 30px 20px;
+    border-radius: 50%;
+    right: 25px;
+    bottom: 100px;
+    z-index: 2500;
+    transition: ease 0.3s;
+}
+
+.fa-envelope:hover {
+    background-color: #2d4ec6;
+    transition: ease 0.3s;
+    padding: 33px 23px 33px 23px;
+}
+
+.envelope-extended {
+    position: absolute;
+    display: none;
+    bottom: 100px;
+    right: 25px;
+    width: 350px;
+    max-height: 0;
+    flex-direction: column;
+    border-radius: 16px 16px 16px 16px;
+    box-shadow: 2px 5px 5px rgb(156, 156, 156);
+    opacity: 0;
+    transition: ease .2s ,opacity .2s ease, max-height 0.4s;
+    z-index: 2600;
+
+    .header-envelope-extended {
+        @include centerItems();
+        display: flex;
+        justify-content: center;
+        background-color: #213B9A;
+        padding: 10px;
+        border-radius: 16px 16px 0 0;
+        color: white;
+
+        .fa-x {
+            position: absolute;
+            right: 20px;
+        }
+    }
+
+    .envelope-content {
+        height: 100%;
+        background-color: #EFEFEF;
+        border-radius: 0 0 16px 16px;
+        margin: 0;
+        list-style-type: none;
+        padding: none;
+
+        .envelope-content-card {
+            border: none;
+            background-color: #E3E3E3;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 16px;
+
+            .envelope-card-title {
+                font-size: 18px;
+            }
+
+            .notif-card-text {
+                font-size: 14px;
+            }
+        }
+            
+        
+    }
+}
+
+.envelope-extended.active {
+    opacity: 1;
+    height: 500px;
+    max-height: 700px;
+}

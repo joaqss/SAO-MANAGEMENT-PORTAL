@@ -2,17 +2,19 @@
 @import "../01-base/_footer";
 @import "../01-base/_user-burger";
 @import "../01-base/_sidebar";
+@import "../01-base/_announcement";
 
 body {
     display: flex;
     height: 100vh;
     margin: 0;
     width: 100%; 
+ 
 }
 
 .wrapper-main {
     width: 100%;
-    height: 100vh;
+    height: 100vh;   
 
     .navbar-title {
         margin-top: 30px;
@@ -22,16 +24,45 @@ body {
             font-size: 28px;
             line-height: 16px;
         }
-
     }
 }
 
 main {    
     display: flex;
     flex-direction: column;
-    flex-grow: 1; // Allow the main content to grow and take up available space
-    overflow-y: auto; // Enable vertical scrolling if content overflows
+    
+    overflow-y: auto;
+    overflow-x:hidden;
     z-index: 0;
-    margin-top: 40px;
-    margin-left: 40px;
+    margin: 40px;
+
+    .main-title {
+        font-weight: bold;
+    }
+
+    .col-docsEvents {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .documents-content {
+        width: 100%;
+        height: 180px;
+        background-color: #EFEFEF;
+        border-radius: 32px;
+    }
+    .upcomingEvents-content {
+        width: 100%;
+        height: 410px;
+        background-color: #EFEFEF;
+        border-radius: 32px;
+    }
+
+    .budget-content {
+        width: 100%;
+        height: 650px;
+        background-color: #EFEFEF;
+        border-radius: 32px;
+    }
 }

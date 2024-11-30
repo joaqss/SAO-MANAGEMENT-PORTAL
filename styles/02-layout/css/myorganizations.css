@@ -14,14 +14,15 @@ footer {
   display: flex;
   background-color: #FBAF41;
   width: 100%;
-  height: 90px;
+  height: 80px;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 2000;
 }
 footer .footer-logo {
-  width: 10%;
+  width: 9em;
+  min-width: 9em;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -46,6 +47,11 @@ navbar .fa-bell {
   margin-left: auto;
   cursor: pointer;
   color: #213B9A;
+  transition: ease 0.3s;
+}
+navbar .fa-bell:hover {
+  color: #2d4ec6;
+  transition: ease 0.3s;
 }
 navbar .user-burger {
   -webkit-user-select: none; /* Safari */

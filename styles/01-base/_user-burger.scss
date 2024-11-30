@@ -15,6 +15,12 @@ navbar {
         margin-left: auto;
         cursor: pointer;
         color: #213B9A;
+        transition: ease 0.3s;
+    }
+
+    .fa-bell:hover {
+        color: #2d4ec6;
+        transition: ease 0.3s;
     }
 
     .user-burger {

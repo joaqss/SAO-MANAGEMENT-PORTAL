@@ -14,14 +14,15 @@ footer {
   display: flex;
   background-color: #FBAF41;
   width: 100%;
-  height: 90px;
+  height: 80px;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 2000;
 }
 footer .footer-logo {
-  width: 10%;
+  width: 9em;
+  min-width: 9em;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -46,6 +47,11 @@ navbar .fa-bell {
   margin-left: auto;
   cursor: pointer;
   color: #213B9A;
+  transition: ease 0.3s;
+}
+navbar .fa-bell:hover {
+  color: #2d4ec6;
+  transition: ease 0.3s;
 }
 navbar .user-burger {
   -webkit-user-select: none; /* Safari */
@@ -198,6 +204,83 @@ sidebar .sao-portal_logo {
   cursor: pointer;
 }
 
+.fa-envelope {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  background-color: #213B9A;
+  color: white;
+  padding: 30px 20px 30px 20px;
+  border-radius: 50%;
+  right: 25px;
+  bottom: 100px;
+  z-index: 2500;
+  transition: ease 0.3s;
+}
+
+.fa-envelope:hover {
+  background-color: #2d4ec6;
+  transition: ease 0.3s;
+  padding: 33px 23px 33px 23px;
+}
+
+.envelope-extended {
+  position: absolute;
+  display: none;
+  bottom: 100px;
+  right: 25px;
+  width: 350px;
+  max-height: 0;
+  flex-direction: column;
+  border-radius: 16px 16px 16px 16px;
+  box-shadow: 2px 5px 5px rgb(156, 156, 156);
+  opacity: 0;
+  transition: ease 0.2s, opacity 0.2s ease, max-height 0.4s;
+  z-index: 2600;
+}
+.envelope-extended .header-envelope-extended {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #213B9A;
+  padding: 10px;
+  border-radius: 16px 16px 0 0;
+  color: white;
+}
+.envelope-extended .header-envelope-extended .fa-x {
+  position: absolute;
+  right: 20px;
+}
+.envelope-extended .envelope-content {
+  height: 100%;
+  background-color: #EFEFEF;
+  border-radius: 0 0 16px 16px;
+  margin: 0;
+  list-style-type: none;
+  padding: none;
+}
+.envelope-extended .envelope-content .envelope-content-card {
+  border: none;
+  background-color: #E3E3E3;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.envelope-extended .envelope-content .envelope-content-card .envelope-card-title {
+  font-size: 18px;
+}
+.envelope-extended .envelope-content .envelope-content-card .notif-card-text {
+  font-size: 14px;
+}
+
+.envelope-extended.active {
+  opacity: 1;
+  height: 500px;
+  max-height: 700px;
+}
+
 body {
   display: flex;
   height: 100vh;
@@ -221,9 +304,34 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: 0;
-  margin-top: 40px;
-  margin-left: 40px;
+  margin: 40px;
+}
+main .main-title {
+  font-weight: bold;
+}
+main .col-docsEvents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .documents-content {
+  width: 100%;
+  height: 180px;
+  background-color: #EFEFEF;
+  border-radius: 32px;
+}
+main .upcomingEvents-content {
+  width: 100%;
+  height: 410px;
+  background-color: #EFEFEF;
+  border-radius: 32px;
+}
+main .budget-content {
+  width: 100%;
+  height: 650px;
+  background-color: #EFEFEF;
+  border-radius: 32px;
 }
